@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="LW1ZSIVtbQPNmV9c1Z0XYs" LanguageVersion="2020.1.0.53" Version="0.128">
+  <NugetDependency Id="M68a1ivczrHPgh0kytZGXe" Location="VL.CoreLib" Version="2020.1.0" />
+  <Patch Id="DmTq4bjSxmTQMlUX5NBecR">
+    <Canvas Id="McQGA3UlkrSQR1DlqhAGgX" DefaultCategory="Main" CanvasType="FullCategory">
+      <!--
+
+    ************************ GetURI ************************
+
+-->
+      <Node Name="GetURI" Bounds="129,133" Id="VlWZyID7evaQc2qx2PL67d">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="LQqzsNuv0uEQFP9uRrPnfW">
+          <Canvas Id="Ns8dufUsBuZNZeObnWl2PA" CanvasType="Group">
+            <Node Bounds="298,275,388,263" Id="O8uK9Yjjr2pLbt8p9dqyIn">
+              <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+                <Choice Kind="ProcessAppFlag" Name="AsyncTask" />
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              </p:NodeReference>
+              <Pin Id="Ki9sYBv5Z9UQd4aIx0EjF6" Name="Trigger" Kind="InputPin" />
+              <Pin Id="I0FHmmThkaAPaIJpnJkS2e" Name="Abort" Kind="InputPin" />
+              <Pin Id="L5AQDxWBeDgNBBCj1VPuWj" Name="Result" Kind="OutputPin" />
+              <Pin Id="VzGSQ6S1LotOtbVVHgT7vZ" Name="In Progress" Kind="OutputPin" />
+              <Patch Id="S4Z0dfIgn07LZlTf61chSH" ManuallySortedPins="true">
+                <ControlPoint Id="RpYeJh4a50BM2XmBIYCzVU" Bounds="641,531" />
+                <Node Bounds="310,298,65,26" Id="GzdzIVybPkyO1lSfLyoRgG">
+                  <p:NodeReference LastCategoryFullName="System.Net.Http.HttpClient" LastSymbolSource="System.Net.Http.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="GetAsync" />
+                    <PinReference Kind="InputPin" Name="Cancellation Token" />
+                    <PinReference Kind="InputPin" Name="Completion Option" />
+                    <PinReference Kind="InputPin" Name="Request Uri">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastSymbolSource="mscorlib.dll">
+                        <Choice Kind="TypeFlag" Name="String" />
+                      </p:DataTypeReference>
+                    </PinReference>
+                  </p:NodeReference>
+                  <Pin Id="CJAX5XHJFEwOsJYNllmZ6X" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="RxLxUPyFBsBQOakcg9q13C" Name="Request Uri" Kind="InputPin" />
+                  <Pin Id="BLcyUkx8gEcMF83hWZmvdo" Name="Completion Option" Kind="InputPin" />
+                  <Pin Id="Lhu4EekTONHOViwuDjbPg0" Name="Cancellation Token" Kind="InputPin" />
+                  <Pin Id="LI6LsrnXrX3MrN4Vjx7oib" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="JnJuuGAEGS6OR3hyNwwCW2" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Patch Id="QTLGdwue5NVN5QRyOx0mY0" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="R8Zc6OHb5ldPLVHSHi128w" Name="Update" ManuallySortedPins="true">
+                  <Pin Id="H305kpXSeKhNKTniyTbvGq" Name="Input 1" Kind="InputPin" />
+                  <Pin Id="QKz8bSFH1oqN6PS5akbiYW" Name="Output" Kind="OutputPin" />
+                </Patch>
+                <Node Bounds="370,340,44,26" Id="FHR76nnirhcLlvhFm1jvFS">
+                  <p:NodeReference LastCategoryFullName="Reactive.Task" LastSymbolSource="VL.Reactive.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="Task" />
+                    <Choice Kind="OperationCallFlag" Name="Result" />
+                  </p:NodeReference>
+                  <Pin Id="Qd0o2dG87taLeNL8rm9aFo" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="UTP4YVQRngaNEFsrT1DgFc" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="AzXHpMg8sNWOIBeCpEJRyF" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="409,390,97,26" Id="Ro4F68EFuk6NzUJgHkd48Y">
+                  <p:NodeReference LastCategoryFullName="System.Net.Http.HttpResponseMessage" LastSymbolSource="System.Net.Http.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="HttpResponseMessage" />
+                    <Choice Kind="OperationCallFlag" Name="Content" />
+                  </p:NodeReference>
+                  <Pin Id="KQsT94htOfqNUC38JINf3h" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="JtuG98f1P51NvGT8CS7EdK" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="EDLjuol31xEPfwNyE3dCrE" Name="Content" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="501,433,103,26" Id="Uf6qaIVAbIUOuvzpv73S34">
+                  <p:NodeReference LastCategoryFullName="System.Net.Http.HttpContent" LastSymbolSource="System.Net.Http.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="HttpContent" />
+                    <Choice Kind="OperationCallFlag" Name="ReadAsStringAsync" />
+                  </p:NodeReference>
+                  <Pin Id="ENJhj27EXL2NEf6sTU0afX" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="I5gDB5eHMstPUCYn6pV66v" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="LrWWVKE0i2NQGU446GUVtO" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="598,476,44,26" Id="MIedF2ujHSAPsIUiByrSxN">
+                  <p:NodeReference LastCategoryFullName="Reactive.Task" LastSymbolSource="VL.Reactive.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="Task" />
+                    <Choice Kind="OperationCallFlag" Name="Result" />
+                  </p:NodeReference>
+                  <Pin Id="VgVSBrWSitxLbSSFnHYxfj" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="NLkHnbe8DWPPTnkMy4aS4Z" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="LXYhDt8ziYoQTViQ41uRbf" Name="Result" Kind="OutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <Node Bounds="311,195,53,26" Id="VorDAKATgp4NTbZh1dz1ND">
+              <p:NodeReference LastCategoryFullName="System.Net.Http.HttpClient" LastSymbolSource="System.Net.Http.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="HttpClient" />
+                <Choice Kind="OperationCallFlag" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="L8LbnZ4wYHRLKx31QPjFnW" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="299,566,65,19" Id="IvHyjIqWhZKLyPIXRSQ4t7">
+              <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
+              </p:NodeReference>
+              <Pin Id="N67c2RL6AdBLtHfSkn0iWT" Name="Async Notifications" Kind="InputPin" />
+              <Pin Id="LOe3Tu1IJfUPWY9uUQEX87" Name="Reset" Kind="InputPin" />
+              <Pin Id="ACHeT5T2PpCMc15BL69Skb" Name="Value" Kind="OutputPin" />
+              <Pin Id="BoaOcaIx1sRPwIc0G7aWaY" Name="On Data" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="DXB0uNFPLq8NisBg64DfRb" Bounds="297,73" />
+            <ControlPoint Id="S0u3YfFr0s7LozcsHOSqLX" Bounds="334,121" />
+            <ControlPoint Id="LiHP6sIGvHLQQP2ODWqVwD" Bounds="301,618" />
+          </Canvas>
+          <Patch Id="Gl8ELvhbH2HLIf6Yhbf9Qf" Name="Create" />
+          <Patch Id="HBL9nNPn3toLXhttosXLsT" Name="Update">
+            <Pin Id="JduCoQP847LNGHua2utmec" Name="Trigger" Kind="InputPin" />
+            <Pin Id="EWjVlHpguIpNZARYVL56m9" Name="URI" Kind="InputPin" />
+            <Pin Id="OG4yEbBU2FsOEwv7MF4QBz" Name="Body" Kind="OutputPin" />
+          </Patch>
+          <!--
+
+    ************************  ************************
+
+-->
+          <ProcessDefinition Id="Nl1W508oejTL6gqXe77Zbc">
+            <Fragment Id="EG4rrGDfO3AMkoNkPTwghj" Patch="Gl8ELvhbH2HLIf6Yhbf9Qf" Enabled="true" />
+            <Fragment Id="Js3mWPtUH7NPpY7pI75CA4" Patch="HBL9nNPn3toLXhttosXLsT" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="AZGuHo8VowoMMo8q5RNSaJ" Ids="RpYeJh4a50BM2XmBIYCzVU,QKz8bSFH1oqN6PS5akbiYW" IsHidden="true" />
+          <Link Id="Ms0dFSX5lW0O3RzNf52kvT" Ids="L8LbnZ4wYHRLKx31QPjFnW,CJAX5XHJFEwOsJYNllmZ6X" />
+          <Link Id="M1sKGe21dilOHJ0NtizXXY" Ids="JnJuuGAEGS6OR3hyNwwCW2,Qd0o2dG87taLeNL8rm9aFo" />
+          <Link Id="A6JcQ5cRA6jN97X8XUeaWv" Ids="AzXHpMg8sNWOIBeCpEJRyF,KQsT94htOfqNUC38JINf3h" />
+          <Link Id="JYD59H27CYBPXp7xeIMcln" Ids="EDLjuol31xEPfwNyE3dCrE,ENJhj27EXL2NEf6sTU0afX" />
+          <Link Id="UFBiP4ntybmPbhw9wQ0zw0" Ids="LrWWVKE0i2NQGU446GUVtO,VgVSBrWSitxLbSSFnHYxfj" />
+          <Link Id="Pr9VT6dW07VO2mHvlD4ubl" Ids="LXYhDt8ziYoQTViQ41uRbf,RpYeJh4a50BM2XmBIYCzVU" />
+          <Link Id="EdQsJk3rsDBOtHVESDqJLm" Ids="L5AQDxWBeDgNBBCj1VPuWj,N67c2RL6AdBLtHfSkn0iWT" />
+          <Link Id="HeVAPXkB2qtPoiP76JUkHr" Ids="JduCoQP847LNGHua2utmec,DXB0uNFPLq8NisBg64DfRb" IsHidden="true" />
+          <Link Id="ViITFR3BuCNODoomU3renL" Ids="DXB0uNFPLq8NisBg64DfRb,Ki9sYBv5Z9UQd4aIx0EjF6" />
+          <Link Id="FtyEadMt3h3OCGI8oFmjXM" Ids="EWjVlHpguIpNZARYVL56m9,S0u3YfFr0s7LozcsHOSqLX" IsHidden="true" />
+          <Link Id="GROyWLsQ2piNmFi0f5lmsA" Ids="S0u3YfFr0s7LozcsHOSqLX,RxLxUPyFBsBQOakcg9q13C" />
+          <Link Id="BxhZPTCA6FuMRwT1tEMLPz" Ids="LiHP6sIGvHLQQP2ODWqVwD,OG4yEbBU2FsOEwv7MF4QBz" IsHidden="true" />
+          <Link Id="QUvtow0RsmyL39ueyEeA3I" Ids="ACHeT5T2PpCMc15BL69Skb,LiHP6sIGvHLQQP2ODWqVwD" />
+        </Patch>
+      </Node>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="CJgYPKNuEmrOEytr0J572K">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="OoDePBt9e67OljrLo1H4Nm">
+        <Canvas Id="B3cDry4HRf7PlekIPeaEsy" CanvasType="Group">
+          <Node Bounds="45,298,45,19" Id="Nz98UUTkwQXMzPpsC7cF2c">
+            <p:NodeReference LastCategoryFullName="Animation" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="LFO" />
+            </p:NodeReference>
+            <Pin Id="A43CEZGANDWOntmpV5ayPT" Name="Period" Kind="InputPin" />
+            <Pin Id="AKNYIoNXmOzNxclYymLSjT" Name="Pause" Kind="InputPin" />
+            <Pin Id="QwCA72Wqor0L4K29gsUIs7" Name="Reset" Kind="ApplyPin" />
+            <Pin Id="DNxJcqcmwoHNrApB1gHOkL" Name="Phase" Kind="OutputPin" />
+            <Pin Id="JLeccn6aCmcOT8fb24XC1l" Name="On New Cycle" Kind="OutputPin" />
+            <Pin Id="BpbmF8GLzsGP3lxV2Wz2Q4" Name="Cycles" Kind="OutputPin" />
+          </Node>
+          <Pad Id="NyMbyv2fsdFM7bYvlYNidx" Comment="Phase" Bounds="48,351,35,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="369,229,47,19" Id="QttihH1LjeeN2erEVFn0yy">
+            <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="NetworkTools.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GetURI" />
+            </p:NodeReference>
+            <Pin Id="B5IzMQfE2RAMDQC2xLllrh" Name="Trigger" Kind="InputPin" />
+            <Pin Id="NaAz1xIkY1WPCIDfBcP5C3" Name="URI" Kind="InputPin" />
+            <Pin Id="CuWqMMnOXvRM48zhkowTAq" Name="Body" Kind="OutputPin" />
+          </Node>
+          <Pad Id="ODtHIYjDx9lLDAV8XnEuzO" Comment="Body" Bounds="371,282,440,252" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="UWQZYVRQeBjOHcI6y0JwkO" Comment="Trigger" Bounds="369,145,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="D1mDGvWlKHXLr6GqqgwCP1" Comment="URI" Bounds="442,193,163,26" ShowValueBox="true" isIOBox="true" Value="https://ya.ru">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+        </Canvas>
+        <Patch Id="KA3pLScyw3BMUJHtwiWFOi" Name="Create" />
+        <Patch Id="OBUVLnVoAs2MqtENNEakBR" Name="Update" />
+        <ProcessDefinition Id="QUkZTJ3eES3N95eMLI5Hql">
+          <Fragment Id="V1kScCymmxhNFC0HIGmvnz" Patch="KA3pLScyw3BMUJHtwiWFOi" Enabled="true" />
+          <Fragment Id="N5rupuRegZXQNZOGABv6v6" Patch="OBUVLnVoAs2MqtENNEakBR" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="GZOa5gbdZQDLk1LwOREaJ5" Ids="DNxJcqcmwoHNrApB1gHOkL,NyMbyv2fsdFM7bYvlYNidx" />
+        <Link Id="UEjc7wFXG05MLWkmcWyMio" Ids="CuWqMMnOXvRM48zhkowTAq,ODtHIYjDx9lLDAV8XnEuzO" />
+        <Link Id="VK0pn3vE0uiNoF1TEairMD" Ids="UWQZYVRQeBjOHcI6y0JwkO,B5IzMQfE2RAMDQC2xLllrh" />
+        <Link Id="NvjtcVTPDPHPm6CVxKfSDs" Ids="D1mDGvWlKHXLr6GqqgwCP1,NaAz1xIkY1WPCIDfBcP5C3" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="Iop6dL4EUPPN6J3LNRXTbc" Location="VL.Skia" Version="2020.1.0" />
+  <PlatformDependency Id="VA4gJt2bhXEO6AhCE5DkMc" Location="System.Net.Http" />
+</Document>

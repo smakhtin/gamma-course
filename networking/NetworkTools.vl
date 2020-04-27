@@ -471,20 +471,6 @@
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="OYrtpyt190OPuU5UFAD76Y" Comment="URI" Bounds="1131,117,123,25" ShowValueBox="true" isIOBox="true" Value="http://localhost:3000/">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="OAYzSuQkCp1NfvUUUlvTkQ" Comment="URI" Bounds="1048,269,25,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="FkFPDI1lVzzNoj4CWgiRSC" Comment="Refresh" Bounds="1048,5,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
         </Canvas>
         <Patch Id="KA3pLScyw3BMUJHtwiWFOi" Name="Create" />
         <Patch Id="OBUVLnVoAs2MqtENNEakBR" Name="Update" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Mdf1CQT1D4lOI8A1LIqQNu" LanguageVersion="2019.1.0-0930-g60a3dd6ea9" Version="0.128">
-  <NugetDependency Id="FkQiHJrgzRKQHFLzDn3rHG" Location="VL.CoreLib" Version="2019.1.0-930" />
+<Document xmlns:p="property" Id="Mdf1CQT1D4lOI8A1LIqQNu" LanguageVersion="2021.4.0.526" Version="0.128">
+  <NugetDependency Id="FkQiHJrgzRKQHFLzDn3rHG" Location="VL.CoreLib" Version="2021.4.0-0526-gd606d93626" />
   <Patch Id="AW7BIiG0d5NNWO6sxikMb7">
     <Canvas Id="CNz59gpam2gMxKmcuLvCOD" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -20,7 +20,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="Q08MWvoARL1PF88A4XVJDa" Name="Bounds" Kind="InputPin" DefaultValue="802, 78, 370, 314">
+            <Pin Id="Q08MWvoARL1PF88A4XVJDa" Name="Bounds" Kind="InputPin" DefaultValue="1079, 102, 370, 314">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -29,6 +29,7 @@
             <Pin Id="LZZnyUoSA5CQGctLf96U3x" Name="Color" Kind="InputPin" />
             <Pin Id="Mxx4ilwjhIRL8mC9OKEakD" Name="Clear" Kind="InputPin" />
             <Pin Id="JRiFyU7iZDONIzJE6R0ua4" Name="Space" Kind="InputPin" />
+            <Pin Id="D0Ty9ypwT9kLDJtKkW6Nuj" Name="Show Cursor" Kind="InputPin" />
             <Pin Id="PdY2n91xwnvP8fAk0VjboJ" Name="VSync" Kind="InputPin" />
             <Pin Id="LElIQuP1r16PQlO062LrnM" Name="Enabled" Kind="InputPin" />
             <Pin Id="SAnobsUrfr2NPOmh6su2I6" Name="Form" Kind="OutputPin" />
@@ -114,7 +115,7 @@
             <Pin Id="O6l9CEppPueLygW9PoxyS5" Name="Hue" Kind="InputPin" />
             <Pin Id="HbzyqawfS80LYGrvdJ9efA" Name="Saturation" Kind="InputPin" />
             <Pin Id="VoShZHMPZ0hMeynpUTpx4n" Name="Value" Kind="InputPin" />
-            <Pin Id="UR8Q1dAzKlgOR3JOTmkHIY" Name="Alpha" Kind="InputPin" />
+            <Pin Id="UR8Q1dAzKlgOR3JOTmkHIY" Name="Alpha" Kind="InputPin" DefaultValue="0.8" />
             <Pin Id="IprCM85qlYcQT2Y9GSv2Eu" Name="Result" Kind="OutputPin" />
           </Node>
           <Node Bounds="164,506,45,19" Id="REetql77U0kPDyuc5jKWoC">
@@ -128,7 +129,7 @@
             <Pin Id="Fdh6NdjDFrZQEHAQtjnz6P" Name="Shader" Kind="InputPin" />
             <Pin Id="Lw2cdStj4CuQPoz4DUu3sp" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="S3zSNrsOW0tNvkRda6G3WB" Comment="" Bounds="226,427,35,15" ShowValueBox="true" isIOBox="true" Value="2.05">
+          <Pad Id="S3zSNrsOW0tNvkRda6G3WB" Comment="" Bounds="226,427,35,15" ShowValueBox="true" isIOBox="true" Value="0.77">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
@@ -155,16 +156,12 @@
             </p:NodeReference>
             <Pin Id="ObNw6w4NhuAPbkGatLUU7s" Name="Input" Kind="InputPin" />
             <Pin Id="ElZ3unvndEFPqCVhaa787S" Name="Frame Count" Kind="InputPin" />
-            <Pin Id="LAaXLt64fqnNicNXLOHbP3" Name="Clear" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="LAaXLt64fqnNicNXLOHbP3" Name="Clear" Kind="InputPin" />
             <Pin Id="G4kLaB2nU5mMcGDgqyXoCe" Name="Insert" Kind="InputPin" />
             <Pin Id="Q2CpcPOGKkZP8hJvXdU02Q" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="71,690,109,140" Id="L5YkWNcSmK4PaBklllbVBv">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
               <FullNameCategoryReference ID="Primitive" />
@@ -215,21 +212,15 @@
     ************************ DObject ************************
 
 -->
-          <Node Name="DObject" Bounds="90,74" Id="Nb1Q5B97d4kQZcXut8Ohcq">
+          <Node Name="DObject" Bounds="85,68" Id="Nb1Q5B97d4kQZcXut8Ohcq">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="RecordDefinition" Name="Record" />
             </p:NodeReference>
             <Patch Id="VZv9Go73CyyO6D1MlouEap">
               <Canvas Id="LvuuhEl01hIPal8Zj4GENE" CanvasType="Group">
-                <Pad Id="A652Z6NH9TnOQatcQYch2n" SlotId="FDtBVKdFaHHPKS1muXiDoX" Bounds="271,161">
-                  <p:ValueBoxSettings />
-                </Pad>
-                <Pad Id="RqK3QjD6Qa8LDwQQ3rveN7" SlotId="VSeA37s0pVILxSsODsdDxH" Bounds="338,160">
-                  <p:ValueBoxSettings />
-                </Pad>
-                <Pad Id="S18PWAq55rmLSDzr9Xk9un" SlotId="GR4Ik56VqPfNS0SCtU2mlt" Bounds="403,158">
-                  <p:ValueBoxSettings />
-                </Pad>
+                <Pad Id="A652Z6NH9TnOQatcQYch2n" SlotId="FDtBVKdFaHHPKS1muXiDoX" Bounds="271,161" />
+                <Pad Id="RqK3QjD6Qa8LDwQQ3rveN7" SlotId="VSeA37s0pVILxSsODsdDxH" Bounds="338,160" />
+                <Pad Id="S18PWAq55rmLSDzr9Xk9un" SlotId="GR4Ik56VqPfNS0SCtU2mlt" Bounds="403,158" />
                 <ControlPoint Id="OZ6kaHREo2BOtXUQsvo17q" Bounds="403,128" />
                 <ControlPoint Id="OoUroVyyz6FOWYzNQ6Fw1L" Bounds="403,188" />
                 <ControlPoint Id="AsNPHFwWRIgK9WFdDfSvIH" Bounds="338,130" />
@@ -237,42 +228,23 @@
                 <ControlPoint Id="EAaAMRQW9IvOdYRqOGRJ1S" Bounds="271,131" />
                 <ControlPoint Id="GyOgPFh6f3dNQufEOymqn9" Bounds="271,191" />
               </Canvas>
-              <Patch Id="EB8xfBa1TL7Liy0h6tb8Ry" Name="Create">
-                <Pin Id="UytNBcWIL4zQEbrXzX2LEr" Name="Scale" Kind="InputPin" />
-                <Pin Id="NBaNgUULBq3NNoTejuFeI5" Name="Color" Kind="InputPin" />
-                <Pin Id="EPiAYnthOp1PXp4LM9yRqF" Name="Position" Kind="InputPin">
-                  <p:TypeAnnotation>
-                    <Choice Kind="TypeFlag" Name="Vector2" />
-                  </p:TypeAnnotation>
-                </Pin>
-              </Patch>
-              <!--
-
-    ************************  ************************
-
--->
               <ProcessDefinition Id="GTXICzCRH7xL7FlBCnsFyT" IsHidden="true">
                 <Fragment Id="LLkF1YMz371MLo9shkoh8Y" Patch="EB8xfBa1TL7Liy0h6tb8Ry" Enabled="true" />
                 <Fragment Id="OH8Aq3O1d91LRj0XLXZM0P" Patch="JAcVlrL7AEbNI6pbDiOgEp" Enabled="true" />
               </ProcessDefinition>
               <Slot Id="FDtBVKdFaHHPKS1muXiDoX" Name="Position" />
               <Slot Id="VSeA37s0pVILxSsODsdDxH" Name="Color">
-                <p:TypeAnnotation>
+                <p:TypeAnnotation p:Type="TypeReference">
                   <Choice Kind="TypeFlag" Name="SkiaPaint" />
                 </p:TypeAnnotation>
               </Slot>
               <Slot Id="GR4Ik56VqPfNS0SCtU2mlt" Name="Scale">
-                <p:TypeAnnotation>
+                <p:TypeAnnotation p:Type="TypeReference">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Slot>
               <Link Id="Ifwwgin3DkLQBZ5UhOGMIf" Ids="UytNBcWIL4zQEbrXzX2LEr,OZ6kaHREo2BOtXUQsvo17q" IsHidden="true" />
               <Link Id="JGctNms92XNNwUmlrD3tyx" Ids="OZ6kaHREo2BOtXUQsvo17q,S18PWAq55rmLSDzr9Xk9un" />
-              <Patch Id="JAcVlrL7AEbNI6pbDiOgEp" Name="Split">
-                <Pin Id="GkutBpmTXrgLC4f0aZQSeT" Name="Scale" Kind="OutputPin" />
-                <Pin Id="RMuRwp0QTLzQPkQYDNwCcd" Name="Color" Kind="OutputPin" />
-                <Pin Id="RuCD7KDd3hrOQUwY9PjZCK" Name="Position" Kind="OutputPin" />
-              </Patch>
               <Link Id="IAK7ckbX6zKNm7nMOjiL35" Ids="OoUroVyyz6FOWYzNQ6Fw1L,GkutBpmTXrgLC4f0aZQSeT" IsHidden="true" />
               <Link Id="BksjzUQ6aUeLm5XXihUbVE" Ids="S18PWAq55rmLSDzr9Xk9un,OoUroVyyz6FOWYzNQ6Fw1L" />
               <Link Id="UAhQNpkQw8hNnvkwetrWVv" Ids="NBaNgUULBq3NNoTejuFeI5,AsNPHFwWRIgK9WFdDfSvIH" IsHidden="true" />
@@ -283,6 +255,20 @@
               <Link Id="AOEjGU1NimmLUORZhFam1B" Ids="EAaAMRQW9IvOdYRqOGRJ1S,A652Z6NH9TnOQatcQYch2n" />
               <Link Id="IB2DDSCClv8QXaVJr29yF6" Ids="GyOgPFh6f3dNQufEOymqn9,RuCD7KDd3hrOQUwY9PjZCK" IsHidden="true" />
               <Link Id="KlzyytcOrzPOkRdkKuRwlU" Ids="A652Z6NH9TnOQatcQYch2n,GyOgPFh6f3dNQufEOymqn9" />
+              <Patch Id="EB8xfBa1TL7Liy0h6tb8Ry" Name="Create">
+                <Pin Id="EPiAYnthOp1PXp4LM9yRqF" Name="Position" Kind="InputPin">
+                  <p:TypeAnnotation>
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="NBaNgUULBq3NNoTejuFeI5" Name="Color" Kind="InputPin" />
+                <Pin Id="UytNBcWIL4zQEbrXzX2LEr" Name="Scale" Kind="InputPin" />
+              </Patch>
+              <Patch Id="JAcVlrL7AEbNI6pbDiOgEp" Name="Split">
+                <Pin Id="RuCD7KDd3hrOQUwY9PjZCK" Name="Position" Kind="OutputPin" />
+                <Pin Id="RMuRwp0QTLzQPkQYDNwCcd" Name="Color" Kind="OutputPin" />
+                <Pin Id="GkutBpmTXrgLC4f0aZQSeT" Name="Scale" Kind="OutputPin" />
+              </Patch>
             </Patch>
           </Node>
           <Node Bounds="85,540,163,26" Id="P4GtKVDlWSxLNOw3mTv5Vq">
@@ -310,18 +296,20 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="PDFWriter" />
             </p:NodeReference>
-            <Pin Id="UPU6LYMCBw4ONBCw6WNtRX" Name="Color" Kind="InputPin" />
             <Pin Id="AJsN6eddFx1MUHkysm5RK8" Name="Input" Kind="InputPin" />
             <Pin Id="LmY9NfCd9d3M6KkI8VFF1f" Name="Path" Kind="InputPin" DefaultValue="..\..\..\..\Desktop\test.pdf">
               <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Path" />
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="UPU6LYMCBw4ONBCw6WNtRX" Name="Color" Kind="InputPin" />
             <Pin Id="FO5sElzJueHPBUJMc4zaui" Name="Space" Kind="InputPin" />
             <Pin Id="J5ANRvHy5jkPMC1I2dFWcR" Name="Author" Kind="InputPin" />
             <Pin Id="BCDd4xe8LXsNzjoBSrAxT6" Name="Width" Kind="InputPin" />
             <Pin Id="BlXgwPN4tOCNQoVPPqMIsm" Name="Height" Kind="InputPin" />
             <Pin Id="Ho7dhvKUiP5OE9sbQhZgf7" Name="Write" Kind="InputPin" />
+            <Pin Id="QoxYiY7Kk5MMvpSqnAIUm5" Name="Raster Dpi" Kind="InputPin" />
+            <Pin Id="PiKYZzhP41bPfwprg9DRLG" Name="Encoding Quality" Kind="InputPin" />
           </Node>
           <Pad Id="OKGiTQwyIpPLjZqrf0QXsC" Comment="Write" Bounds="417,963,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -329,6 +317,56 @@
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="DO1wJdUOgy4MzbIYHM5q1w" Comment="Path" Bounds="299,893,220,21" ShowValueBox="true" isIOBox="true" Value="..\..\..\Desktop\test.pdf">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="GJipRH2aJ4rQEgZoqJG5hj" Bounds="278,554,108,19" ShowValueBox="true" isIOBox="true" Value="Create an object">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="NzPMgLEDOiIPAeMwjpflRs" Bounds="156,590,289,25" ShowValueBox="true" isIOBox="true" Value="Copy when i press LMB or clean if i press RMB">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="SLVSAJisx1QOmF5KHz63bz" Bounds="140,641,289,25" ShowValueBox="true" isIOBox="true" Value="Change the order of objects">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="UBZaSKPV9kMNB70bB8zUOb" Bounds="495,980,117,29" ShowValueBox="true" isIOBox="true" Value="Save the PDF">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="T2lhFUGCI8IPr81wUiJz1Q" Bounds="182,740,276,42" ShowValueBox="true" isIOBox="true" Value="Unpack the object and create as many circles as many objects we have">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
         </Canvas>
@@ -370,8 +408,9 @@
         <Link Id="PqetYMNox9vQJHjyvicRiJ" Ids="AzinHlzF5DEM5yUcDL9Vq0,FUkwa8h7AARPeB9ShuOkTB" />
         <Link Id="PcFSroT4RLiLMGODkf9HWs" Ids="TlowiUB70ViPAeqzMHBbQq,AJsN6eddFx1MUHkysm5RK8" />
         <Link Id="UEStvat4KMjPUL70UIxTpz" Ids="OKGiTQwyIpPLjZqrf0QXsC,Ho7dhvKUiP5OE9sbQhZgf7" />
+        <Link Id="TgqDehs5uj9NCOxla41sMO" Ids="DO1wJdUOgy4MzbIYHM5q1w,LmY9NfCd9d3M6KkI8VFF1f" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="CaQFA9uw9tzOG6uz8AFyi0" Location="VL.Skia" Version="2019.1.0-0930-g60a3dd6ea9" />
+  <NugetDependency Id="CaQFA9uw9tzOG6uz8AFyi0" Location="VL.Skia" Version="2021.4.0-0526-gd606d93626" />
 </Document>

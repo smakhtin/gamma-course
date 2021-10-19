@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="QJcBNcteZsaMhB4pKiSQlD" LanguageVersion="2019.1.0-0930-g60a3dd6ea9" Version="0.128">
-  <NugetDependency Id="JOs8jcWlPKvMnAzoWYhLcj" Location="VL.CoreLib" Version="2019.1.0-930" />
+<Document xmlns:p="property" Id="QJcBNcteZsaMhB4pKiSQlD" LanguageVersion="2021.4.0.526" Version="0.128">
+  <NugetDependency Id="JOs8jcWlPKvMnAzoWYhLcj" Location="VL.CoreLib" Version="2021.4.0-0526-gd606d93626" />
   <Patch Id="MNMoQf2KKD8LjAOOXhyiQ3">
     <Canvas Id="P75wCQo7VsjLTGZ1I3jHF5" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory">
       <!--
@@ -17,11 +17,6 @@
           <Canvas Id="MZ3iZ0vOwuoQKDdcqZBLPR" CanvasType="Group" />
           <Patch Id="SOYRU1zh6V9MmWmzGnBWuF" Name="Create" />
           <Patch Id="INkheb6lZX1OQqgynU0LIH" Name="Update" />
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="DfCxsgh0EytM60BvVmqm18">
             <Fragment Id="RrBuPChZtX1Ow5I1qVA6Sm" Patch="SOYRU1zh6V9MmWmzGnBWuF" Enabled="true" />
             <Fragment Id="DLZLUOHmSthMy8NemzSoQj" Patch="INkheb6lZX1OQqgynU0LIH" Enabled="true" />
@@ -55,6 +50,7 @@
             <Pin Id="TWZFMSt7D99MpcQPxye8fn" Name="Color" Kind="InputPin" />
             <Pin Id="NRpSBkh2tWkMDZ7JrD3POa" Name="Clear" Kind="InputPin" />
             <Pin Id="EFjxGOscXwyPXITjJbHnER" Name="Space" Kind="InputPin" />
+            <Pin Id="ONaxLLqiKPVPT2njRa1T1h" Name="Show Cursor" Kind="InputPin" />
             <Pin Id="KDmkmuQaV59M7p5RG7N67m" Name="VSync" Kind="InputPin" />
             <Pin Id="PGfJtcVBW7WLUzpTWeMkV8" Name="Enabled" Kind="InputPin" />
             <Pin Id="VBrnerlFnkoOetoW44h6VJ" Name="Form" Kind="OutputPin" />
@@ -180,14 +176,18 @@
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
+          <Pad Id="D0tQam2VD4sLRnDngM7NXW" Bounds="529,263,179,19" ShowValueBox="true" isIOBox="true" Value="A little work with the color">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="AQ4rB2DsQAxNydeFviqSGp" Name="Create" />
         <Patch Id="Td0GLb1FJXGPIQiUs8OdgW" Name="Update" />
-        <!--
-
-    ************************  ************************
-
--->
         <ProcessDefinition Id="H8szQqVLLklOXrkfY9gaAV">
           <Fragment Id="J9M38R0vonKOjK67PrjOCd" Patch="AQ4rB2DsQAxNydeFviqSGp" Enabled="true" />
           <Fragment Id="E4tFzoM0cvcOSjkrWqjW1L" Patch="Td0GLb1FJXGPIQiUs8OdgW" Enabled="true" />
@@ -213,5 +213,5 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="EULXxAxnDn1LzboxymNFbU" Location="VL.Skia" Version="2019.1.0-0930-g60a3dd6ea9" />
+  <NugetDependency Id="EULXxAxnDn1LzboxymNFbU" Location="VL.Skia" Version="2021.4.0-0526-gd606d93626" />
 </Document>

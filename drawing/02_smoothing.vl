@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="EiHrumpM1tcMfa30MnvAN9" LanguageVersion="2019.1.0-0930-g60a3dd6ea9" Version="0.128">
-  <NugetDependency Id="NK20xgCbmVSQctHc7SbLTV" Location="VL.CoreLib" Version="2019.1.0-930" />
+<Document xmlns:p="property" Id="EiHrumpM1tcMfa30MnvAN9" LanguageVersion="2021.4.0.526" Version="0.128">
+  <NugetDependency Id="NK20xgCbmVSQctHc7SbLTV" Location="VL.CoreLib" Version="2021.4.0-0526-gd606d93626" />
   <Patch Id="BNewZvOj4JLQW5tvKWJpc9">
     <Canvas Id="NuF4HtX9Ga9PWitwy3hheo" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -20,7 +20,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="MtU24vfgM14LsylfkRuaB3" Name="Bounds" Kind="InputPin" DefaultValue="672, 92, 370, 314">
+            <Pin Id="MtU24vfgM14LsylfkRuaB3" Name="Bounds" Kind="InputPin" DefaultValue="1067, 72, 370, 314">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -29,6 +29,7 @@
             <Pin Id="CO4tA4CnS4GNMdKFcxrG7Y" Name="Color" Kind="InputPin" />
             <Pin Id="LoxnzdmtiIxNxQHdbXXDpC" Name="Clear" Kind="InputPin" />
             <Pin Id="SecUxSR9dsDQX8YshHVjRg" Name="Space" Kind="InputPin" />
+            <Pin Id="QZyG7ZHf3RwLpoBbjsaJh8" Name="Show Cursor" Kind="InputPin" />
             <Pin Id="SsFaEj6XL4IN5SEIpp07IP" Name="VSync" Kind="InputPin" />
             <Pin Id="Cc4sM1n2GIlLnffPiAX4lZ" Name="Enabled" Kind="InputPin" />
             <Pin Id="QooSxU0WBpCLVgCVAS7I94" Name="Form" Kind="OutputPin" />
@@ -87,14 +88,18 @@
             <Pin Id="VPpD9GCTiVdPHDJUjLJRiM" Name="Velocity" Kind="OutputPin" />
             <Pin Id="MNQVL8K5shAMgrJCByrGeq" Name="Acceleration" Kind="OutputPin" />
           </Node>
+          <Pad Id="EHv7GenrApJPiNCz4isfSZ" Bounds="308,237,281,22" ShowValueBox="true" isIOBox="true" Value="A secret souce that animates incoming values">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="GTIUH77U1AANVJ7HbOY7Fi" Name="Create" />
         <Patch Id="O7xM6a6OceoPeY4EiPZEEw" Name="Update" />
-        <!--
-
-    ************************  ************************
-
--->
         <ProcessDefinition Id="RGPrpaki241PlREdXI2ZSI">
           <Fragment Id="NW9ltI01Iw1PHfMdBvuFzj" Patch="GTIUH77U1AANVJ7HbOY7Fi" Enabled="true" />
           <Fragment Id="H7nuAu5vi7aNkcnfhTxmX0" Patch="O7xM6a6OceoPeY4EiPZEEw" Enabled="true" />
@@ -109,5 +114,5 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="HmB2tYi0bQ5MIIAmAySCYY" Location="VL.Skia" Version="2019.1.0-0930-g60a3dd6ea9" />
+  <NugetDependency Id="HmB2tYi0bQ5MIIAmAySCYY" Location="VL.Skia" Version="2021.4.0-0526-gd606d93626" />
 </Document>

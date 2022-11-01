@@ -1,2 +1,2 @@
 # gamma-course
-vvvv gamma course, basic on processing-course repo
+vvvv gamma course, based on processing-course repo
